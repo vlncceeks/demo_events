@@ -4,11 +4,11 @@ FROM python:3.9-slim
 # Устанавливаем рабочую директорию в контейнере
 WORKDIR /app
 
-# Копируем файл зависимостей requirements.txt в контейнер
-COPY requirements.txt /app/
+# Копируем файл зависимостей requirement.txt в контейнер
+COPY requirement.txt /app/
 
 # Устанавливаем зависимости
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirement.txt
 
 # Копируем все остальные файлы проекта в контейнер
 COPY . /app/
